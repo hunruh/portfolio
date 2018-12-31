@@ -14,7 +14,11 @@ class ProjectsPage extends React.Component {
 			selectedProject: ''
 		};
 
-		this.maxAnimationSteps = 6;
+		this.projects = {
+			trino: "trino",
+		}
+
+		this.maxAnimationSteps = this.projects.length;
 	}
 
 	componentDidMount() {
