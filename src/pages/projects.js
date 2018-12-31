@@ -6,8 +6,6 @@ import ProjectTile from '../components/projects/projecttile';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import styles from '../styles/projects.module.scss';
-
 class ProjectsPage extends React.Component {
 	constructor(props) {
 		super(props);
@@ -56,7 +54,7 @@ class ProjectsPage extends React.Component {
 				);
 			default:
 				return (
-					<div className={styles.projects}>
+					<div>
 						<ProjectTile
 							projectTitle='Trino'
 							projectType='Puzzle Game'
@@ -76,7 +74,7 @@ class ProjectsPage extends React.Component {
 
 	render() {
 		return (
-			<Layout pageTitle='Projects'>
+			<Layout pageTitle='Projects' location={this.props.location}>
 				<SEO
 					title='Projects'
 					keywords={[`gatsby`, `application`, `react`]}

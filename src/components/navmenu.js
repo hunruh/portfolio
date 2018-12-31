@@ -15,6 +15,11 @@ class NavMenu extends React.Component {
 		};
 	}
 
+	closeMenu() {
+		this.props.onClose();
+		this.setState({ exiting: true });
+	}
+
 	render() {
 		const animationClass = this.state.exiting
 			? animations.swingExit
@@ -27,10 +32,7 @@ class NavMenu extends React.Component {
 						<div className='container'>
 							<button
 								className={styles.menuToggle}
-								onClick={() => {
-									this.props.onClose();
-									this.setState({ exiting: true });
-								}}>
+								onClick={() => this.closeMenu()}>
 								close
 							</button>
 						</div>
@@ -47,27 +49,35 @@ class NavMenu extends React.Component {
 				)}
 				<NavMenuItem
 					className={animationClass}
+					currentLocation={this.props.location}
 					to='/about/'
 					title='About'
 					description='Who I Am and What I Do'
+					locationMatchAction={() => this.closeMenu()}
 				/>
 				<NavMenuItem
 					className={animationClass}
+					currentLocation={this.props.location}
 					to='/experience/'
 					title='Experience'
 					description='Education and Employment'
+					locationMatchAction={() => this.closeMenu()}
 				/>
 				<NavMenuItem
 					className={animationClass}
+					currentLocation={this.props.location}
 					to='/projects/'
 					title='Projects'
 					description='Personal and Student Work'
+					locationMatchAction={() => this.closeMenu()}
 				/>
 				<NavMenuItem
 					className={animationClass}
+					currentLocation={this.props.location}
 					to='/contact/'
 					title='Contact'
 					description='Want to Know More?'
+					locationMatchAction={() => this.closeMenu()}
 				/>
 			</div>
 		);

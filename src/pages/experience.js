@@ -1,9 +1,11 @@
 import React from 'react';
+import { withPrefix } from 'gatsby';
 
 import ResumeItem from '../components/experience/resumeitem';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+import layoutStyles from '../styles/layout.module.scss';
 import styles from '../styles/experience.module.scss';
 
 class ExperiencePage extends React.Component {
@@ -33,11 +35,16 @@ class ExperiencePage extends React.Component {
 
 	render() {
 		return (
-			<Layout pageTitle='Experience'>
+			<Layout pageTitle='Experience' location={this.props.location}>
 				<SEO
 					title='Experience'
 					keywords={[`gatsby`, `application`, `react`]}
 				/>
+				<a
+					className={layoutStyles.sideButton}
+					href={withPrefix('/resume.pdf')}>
+					Resume PDF
+				</a>
 				<h2>Education</h2>
 				<ResumeItem
 					title='Cornell University'

@@ -6,9 +6,9 @@ import Header from './header';
 import '../styles/core.scss';
 import styles from '../styles/layout.module.scss';
 
-const Layout = ({ pageTitle, children }) => (
+const Layout = ({ pageTitle, location, children }) => (
 	<>
-		<Header pageTitle={pageTitle} />
+		<Header pageTitle={pageTitle} location={location} />
 		<div className={`container ${styles.contentWrapper}`}>{children}</div>
 	</>
 );

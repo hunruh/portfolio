@@ -12,7 +12,7 @@
 
 .sideButton {
     border: 3px solid $red;
-    color: $red;
+    color: $red !important;
     cursor: pointer;
     font-size: 13px;
     font-weight: 700;
@@ -52,7 +52,8 @@
 .sideButton:hover,
 .sideButton:focus,
 .sideButton:active {
-    color: white;
+    color: $white !important;
+    text-decoration: none;
 }
 .sideButton:hover:before,
 .sideButton:focus:before,

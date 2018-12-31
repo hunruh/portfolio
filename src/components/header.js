@@ -30,6 +30,7 @@ class Header extends React.Component {
 				</div>
 				{this.state.menuVisible && (
 					<NavMenu
+						location={this.props.location}
 						onClose={() =>
 							setTimeout(
 								() => this.setState({ menuVisible: false }),

@@ -9,8 +9,8 @@ import SEO from '../components/seo';
 
 import styles from '../styles/about.module.scss';
 
-const AboutPage = () => (
-	<Layout pageTitle='About'>
+const AboutPage = ({ location }) => (
+	<Layout pageTitle='About' location={location}>
 		<SEO title='About' keywords={[`gatsby`, `application`, `react`]} />
 		<h2>Who I Am</h2>
 		<p>
