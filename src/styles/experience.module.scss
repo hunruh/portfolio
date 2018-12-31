@@ -1,3 +1,11 @@
+@import 'variables';
+
 .sectionHead {
     margin-top: 10px;
+}
+
+.topHead {
+    @include media-breakpoint-down(xs) {
+        margin-top: 30px;
+    }
 }

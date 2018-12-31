@@ -45,7 +45,7 @@ class ExperiencePage extends React.Component {
 					href={withPrefix('/resume.pdf')}>
 					Resume PDF
 				</a>
-				<h2>Education</h2>
+				<h2 className={styles.topHead}>Education</h2>
 				<ResumeItem
 					title='Cornell University'
 					titleNote='MEng'
