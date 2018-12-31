@@ -1,0 +1,58 @@
+@import 'colors';
+@import 'variables';
+
+.contentWrapper {
+    position: relative;
+    padding: 30px 30px 30px 265px;
+
+    @include media-breakpoint-down(xs) {
+        padding-left: 30px;
+    }
+}
+
+.sideButton {
+    border: 3px solid $red;
+    color: $red;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    left: 65px;
+    max-width: 150px;
+    padding: 5px 14px 5px 14px;
+    position: absolute;
+
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.sideButton:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $red;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.sideButton:hover, .sideButton:focus, .sideButton:active {
+    color: white;
+}
+.sideButton:hover:before, .sideButton:focus:before, .sideButton:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}

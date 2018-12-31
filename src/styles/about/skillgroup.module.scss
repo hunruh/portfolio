@@ -1,0 +1,32 @@
+@import '../colors';
+
+.emptySkill {
+    border-color: $mid-grey;
+}
+
+.fullSkill {
+    border-color: $red;
+}
+
+.skillGroup {
+    margin-bottom: 20px;
+}
+
+.skillGroupHeader {
+    margin-bottom: 7px;
+}
+
+.skillPoint {
+    border-radius: 14px;
+    border-style: solid;
+    border-width: 3px;
+    display: inline-block;
+    height: 14px;
+    margin-bottom: -1px !important; // Override typography.js last child default
+    margin-right: 7px;
+    width: 14px;
+}
+
+.skillPointSection {
+    margin-right: 7px;
+}

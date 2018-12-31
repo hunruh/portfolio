@@ -1,0 +1,53 @@
+@import '../colors';
+
+.link {
+    color: $dark-grey;
+    transition: ease-in-out 0.15s;
+}
+.link:hover {
+    color: $red;
+    text-decoration: none;
+}
+
+.sectionHead {
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.slider {
+    margin-bottom: 45px;
+    max-width: 632px;
+    padding-right: 72px;
+}
+
+.sliderImage {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.sliderImageOverlay {
+    background: $faded-red;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    opacity: 0.65;
+    position: absolute;
+    top: 0px;
+    transition: ease-in-out 0.15s;
+    width: 100%;
+}
+
+.sliderImageWrapper {
+    position: relative;
+    width: 250px !important;
+    height: 250px;
+}
+.sliderImageWrapper:hover .sliderImageOverlay {
+    opacity: 0;
+}
+
+.title {
+    color: $dark-grey !important;
+    margin-bottom: 0px;
+}

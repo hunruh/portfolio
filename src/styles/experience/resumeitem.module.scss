@@ -1,0 +1,78 @@
+@import '../colors';
+@import '../variables';
+
+.date {
+    color: $mid-grey;
+    font-size: 20px;
+    left: -200px;
+    line-height: 1.25;
+    padding-top: 2px;
+    position: absolute;
+    top: 0px;
+    transition: 0.15s ease-in-out;
+
+    @include media-breakpoint-down(xs) {
+        display: none;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.itemBody {
+    left: 250px;
+    transition: 0.2s ease-in-out;
+}
+
+.link {
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-left: 3px;
+}
+.link a {
+    color: $mid-grey;
+    transition: 0.15s ease-in-out;
+}
+.link:hover a {
+    color: $red;
+    text-decoration: none;
+}
+
+.mobileDate {
+    display: none;
+
+    @include media-breakpoint-down(xs) {
+        display: block;
+        font-weight: 400;
+        margin-bottom: 0px;
+    }
+}
+
+.resumeItem {
+    cursor: default;
+    position: relative;
+}
+.resumeItem:hover .date {
+    color: $red;
+}
+.resumeItem:hover .itemBody {
+    margin-left: 3px;
+}
+
+.subTitle {
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.titleNote {
+    color: $red;
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-left: 7px;
+}

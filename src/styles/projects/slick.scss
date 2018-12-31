@@ -1,0 +1,38 @@
+@import '../colors';
+@import '../variables';
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button::before {
+    color: $faded-red;
+    opacity: 1;
+    transition: ease-in-out 0.15s;
+}
+.slick-dots li button:hover:before, .slick-dots li.slick-active button::before {
+    color: $red;
+}
+
+.slick-next {
+    right: 32px;
+    
+}
+.slick-next:before {
+    content: '\25B6';
+    font-family: 'Material Icons';
+    font-size: 16px;
+}
+.slick-next:hover:before {
+    color: $red !important;
+}
+.slick-next::before {
+    opacity: 1;
+    margin-left: 2px;
+    color: $faded-red !important;
+    transition: ease-in-out 0.15s;
+}
+
+.slick-prev {
+    display: none !important;
+}

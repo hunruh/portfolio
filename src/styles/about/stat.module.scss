@@ -1,0 +1,39 @@
+@import '../colors';
+@import '../variables';
+
+.imageWrapper {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    @include media-breakpoint-down(xs) {
+        display: none;
+    }
+}
+
+.label {
+    display: inline-block;
+    margin: 8px 0px 0px 14px;
+    vertical-align: top;
+
+    @include media-breakpoint-down(xs) {
+        margin: 3px 0px 0px 14px;
+    }
+}
+
+.stat {
+    margin-bottom: 20px;
+}
+
+.value {
+    color: $red;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0px 0px 14px;
+    vertical-align: top;
+
+    @include media-breakpoint-down(xs) {
+        margin: 0px;
+    }
+}

@@ -1,10 +1,26 @@
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import 'colors';
 
 body {
+    color: $dark-grey !important;
     font-family: 'Source Sans Pro';
     font-weight: 300;
 }
 
+b {
+    font-weight: 400 !important;
+}
+
 h1 {
+    cursor: default;
+    font-weight: 700;
+}
+
+h2 {
+    color: $faded-red !important;
+    cursor: default;
+    font-size: 30px !important;
     font-weight: 700;
 }

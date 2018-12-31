@@ -1,4 +1,10 @@
 @import 'colors';
+@import 'variables';
+
+.branding {
+    position: absolute;
+    width: 100%;
+}
 
 .close {
     position: fixed;
@@ -11,6 +17,17 @@
 
 .hidden {
     display: none;
+}
+
+.logoWrapper {
+    display: inline-block;
+    background: $white;
+    width: 250px;
+    padding: 25px 50px 8px 50px;
+
+    @include media-breakpoint-down(xs) {
+        display: none;
+    }
 }
 
 .menuToggle {
