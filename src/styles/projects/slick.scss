@@ -10,13 +10,13 @@
     opacity: 1;
     transition: ease-in-out 0.15s;
 }
-.slick-dots li button:hover:before, .slick-dots li.slick-active button::before {
+.slick-dots li button:hover:before,
+.slick-dots li.slick-active button::before {
     color: $red;
 }
 
 .slick-next {
     right: 32px;
-    
 }
 .slick-next:before {
     content: '\25B6';

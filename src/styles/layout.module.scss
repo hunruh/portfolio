@@ -30,7 +30,7 @@
     transition-duration: 0.2s;
 }
 .sideButton:before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -49,10 +49,14 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-.sideButton:hover, .sideButton:focus, .sideButton:active {
+.sideButton:hover,
+.sideButton:focus,
+.sideButton:active {
     color: white;
 }
-.sideButton:hover:before, .sideButton:focus:before, .sideButton:active:before {
+.sideButton:hover:before,
+.sideButton:focus:before,
+.sideButton:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
