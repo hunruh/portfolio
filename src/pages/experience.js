@@ -110,6 +110,7 @@ class ExperiencePage extends React.Component {
 				<ResumeItem
 					title="RallyMe"
 					subTitle="Software Development Intern"
+					link="https://www.rallyme.com/"
 					description="I worked using Ruby on Rails to expand and update RallyMe’s testing framework.
 					I also implemented an updated analytics system to monitor site traffic and track ecommerce."
 					startDate="Jun 2016"
