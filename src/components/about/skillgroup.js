@@ -8,7 +8,9 @@ function generateSkillPoints(points, maxPoints) {
 	for (var i = 0; i < maxPoints; i++) {
 		skills.push(
 			<span
-				className={`${styles.skillPoint} ${i < points ? styles.fullSkill : ''}`}
+				className={`${styles.skillPoint} ${
+					i < points ? styles.fullSkill : ''
+				}`}
 				key={i}
 			/>
 		);

@@ -25,6 +25,7 @@
     "react-countup": "^4.0.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-ionicons": "^3.0.1",
     "react-slick": "^0.23.2",
     "react-typography": "^0.16.18",
     "slick-carousel": "^1.8.1",

@@ -17,7 +17,7 @@ class Header extends React.Component {
 	render() {
 		return (
 			<div className={styles.header}>
-				<div className='container'>
+				<div className="container">
 					<div className={styles.logo}>
 						<Logo />
 					</div>

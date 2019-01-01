@@ -15,12 +15,23 @@
     z-index: 5;
 }
 
+.headshotWrapper {
+    margin-top: -28px;
+    position: relative;
+    width: 250px;
+    padding: 25px 50px 8px 50px;
+    z-index: 5;
+
+    @include media-breakpoint-down(xs) {
+        display: none;
+    }
+}
+
 .hidden {
     display: none;
 }
 
 .logoWrapper {
-    display: inline-block;
     background: $white;
     width: 250px;
     padding: 25px 50px 8px 50px;

@@ -7,7 +7,9 @@ import styles from '../../styles/about/stat.module.scss';
 const Stat = ({ label, value, image, countDelay }) => (
 	<div className={styles.stat}>
 		<div className={styles.imageWrapper}>{image}</div>
-		<div className={styles.value}><CountUp delay={countDelay} duration={2} end={value} /></div>
+		<div className={styles.value}>
+			<CountUp delay={countDelay} duration={2} end={value} />
+		</div>
 		<div className={styles.label}>{label}</div>
 	</div>
 );

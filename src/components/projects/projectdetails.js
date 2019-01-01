@@ -97,26 +97,38 @@ class ProjectDetails extends React.Component {
 						<p>{this.props.type}</p>
 						<p className={styles.sectionHead}>Technologies</p>
 						<p>{this.props.technologies}</p>
-						<p className={styles.sectionHead}>Project Link</p>
-						<p>
-							<a
-								className={styles.link}
-								href={this.props.link}
-								rel='noopener noreferrer'
-								target='_blank'>
-								{this.getPrettyUrl(this.props.link)}
-							</a>
-						</p>
-						<p className={styles.sectionHead}>GitHub Link</p>
-						<p>
-							<a
-								className={styles.link}
-								href={this.props.github}
-								rel='noopener noreferrer'
-								target='_blank'>
-								{this.getPrettyUrl(this.props.github)}
-							</a>
-						</p>
+						{this.props.link !== undefined && (
+							<>
+								<p className={styles.sectionHead}>
+									Project Link
+								</p>
+								<p>
+									<a
+										className={styles.link}
+										href={this.props.link}
+										rel="noopener noreferrer"
+										target="_blank">
+										{this.getPrettyUrl(this.props.link)}
+									</a>
+								</p>
+							</>
+						)}
+						{this.props.github !== undefined && (
+							<>
+								<p className={styles.sectionHead}>
+									GitHub Link
+								</p>
+								<p>
+									<a
+										className={styles.link}
+										href={this.props.github}
+										rel="noopener noreferrer"
+										target="_blank">
+										{this.getPrettyUrl(this.props.github)}
+									</a>
+								</p>
+							</>
+						)}
 					</div>
 				) : (
 					<div>

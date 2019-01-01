@@ -9,6 +9,7 @@ const ResumeItem = ({
 	titleNote,
 	link,
 	subTitle,
+	subSubTitle,
 	description,
 	startDate,
 	endDate,
@@ -44,7 +45,12 @@ const ResumeItem = ({
 						<a href={link}>&raquo;</a>
 					</h3>
 				)}
-				<p className={styles.subTitle}>{subTitle}</p>
+				<p className={styles.subTitle}>
+					{subTitle}
+					<span className={styles.subSubTitle}>
+						{subSubTitle !== undefined ? ', ' + subSubTitle : ''}
+					</span>
+				</p>
 				<p className={styles.mobileDate}>
 					{formattedStartDate}
 					{formattedEndDate}
@@ -60,6 +66,7 @@ ResumeItem.propTypes = {
 	titleNote: PropTypes.string,
 	link: PropTypes.string,
 	subTitle: PropTypes.string.isRequired,
+	subSubTitle: PropTypes.string,
 	description: PropTypes.string.isRequired,
 	startDate: PropTypes.string,
 	endDate: PropTypes.string,

@@ -1,0 +1,82 @@
+@import 'colors';
+@import 'variables';
+
+.descriptionHead {
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+    @include media-breakpoint-down(xs) {
+        margin-top: 0px;
+    }
+}
+
+.email {
+    color: $dark-grey;
+    font-size: 38px;
+    padding-bottom: 30px;
+    transition: ease-in-out 0.2s;
+
+    @include media-breakpoint-down(xs) {
+        font-size: 30px;
+    }
+}
+.email:hover {
+    color: $red;
+    text-decoration: none;
+}
+
+.socialButton {
+    position: relative;
+    border: 3px solid $red;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    padding: 6px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+
+    @include media-breakpoint-down(xs) {
+        margin-right: 15px;
+    }
+}
+.socialButton:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $red;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.socialButton:hover .socialImage {
+    fill: $white;
+}
+.socialButton:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+.socialImage {
+    fill: $red;
+    height: 50px;
+    transition: 0.2s ease-out;
+    width: 50px;
+}

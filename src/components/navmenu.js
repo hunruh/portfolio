@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Headshot from './headshot';
 import Logo from './logo';
 import NavMenuItem from './navmenuitem';
 
@@ -27,9 +28,9 @@ class NavMenu extends React.Component {
 
 		return (
 			<div className={`${styles.navMenu} ${animationClass}`}>
-				{this.props.isOverlay ? (
+				{this.props.isOverlay && (
 					<div className={styles.close}>
-						<div className='container'>
+						<div className="container">
 							<button
 								className={styles.menuToggle}
 								onClick={() => this.closeMenu()}>
@@ -37,46 +38,47 @@ class NavMenu extends React.Component {
 							</button>
 						</div>
 					</div>
-				) : (
-					<div className={styles.branding}>
-						<div className='container'>
-							<div className={styles.logoWrapper}>
-								<Logo />
-							</div>
-							<div className={styles.headshotWrapper} />
+				)}
+				<div className={styles.branding}>
+					<div className="container">
+						<div className={styles.logoWrapper}>
+							<Logo />
+						</div>
+						<div className={styles.headshotWrapper}>
+							<Headshot />
 						</div>
 					</div>
-				)}
+				</div>
 				<NavMenuItem
 					className={animationClass}
 					currentLocation={this.props.location}
-					to='/about/'
-					title='About'
-					description='Who I Am and What I Do'
+					to="/about/"
+					title="About"
+					description="Who I Am and What I Do"
 					locationMatchAction={() => this.closeMenu()}
 				/>
 				<NavMenuItem
 					className={animationClass}
 					currentLocation={this.props.location}
-					to='/experience/'
-					title='Experience'
-					description='Education and Employment'
+					to="/experience/"
+					title="Experience"
+					description="Education and Employment"
 					locationMatchAction={() => this.closeMenu()}
 				/>
 				<NavMenuItem
 					className={animationClass}
 					currentLocation={this.props.location}
-					to='/projects/'
-					title='Projects'
-					description='Personal and Student Work'
+					to="/projects/"
+					title="Projects"
+					description="Personal and Student Work"
 					locationMatchAction={() => this.closeMenu()}
 				/>
 				<NavMenuItem
 					className={animationClass}
 					currentLocation={this.props.location}
-					to='/contact/'
-					title='Contact'
-					description='Want to Know More?'
+					to="/contact/"
+					title="Contact"
+					description="Want to Know More?"
 					locationMatchAction={() => this.closeMenu()}
 				/>
 			</div>
