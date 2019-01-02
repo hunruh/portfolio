@@ -37,8 +37,10 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "npm run-script build && npm run-script sync",
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "sync": "gsutil -m rsync -R public gs://www.hunruh.com",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },

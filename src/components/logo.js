@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Logo = () => (
@@ -15,7 +16,11 @@ const Logo = () => (
 				}
 			}
 		`}
-		render={data => <Img fluid={data.logoImage.childImageSharp.fluid} />}
+		render={data => (
+			<Link to={'/'}>
+				<Img fluid={data.logoImage.childImageSharp.fluid} />
+			</Link>
+		)}
 	/>
 );
 

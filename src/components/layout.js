@@ -6,7 +6,7 @@ import Header from './header';
 import '../styles/core.scss';
 import styles from '../styles/layout.module.scss';
 
-const Layout = ({ pageTitle, location, children }) => (
+const Layout = ({ pageTitle, location, includeIconsFooter, children }) => (
 	<>
 		<Header pageTitle={pageTitle} location={location} />
 		<div className={`container ${styles.contentWrapper}`}>{children}</div>
@@ -15,9 +15,8 @@ const Layout = ({ pageTitle, location, children }) => (
 				<div className="col text-left">
 					&copy; 2019 Harrison Unruh
 				</div>
-				<div className="col text-right">
-				Icons by <a href="http://icons8.com">Icons8</a>
-				</div>
+				{includeIconsFooter &&
+					<div className="col text-right">Icons by <a href="http://icons8.com">Icons8</a></div>}
 			</div>
 		</div>
 	</>
@@ -25,7 +24,12 @@ const Layout = ({ pageTitle, location, children }) => (
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
-	pageTitle: PropTypes.string.isRequired
+	pageTitle: PropTypes.string.isRequired,
+	includeIconsFooter: PropTypes.bool
 };
+
+Layout.defaultProps = {
+	includeIconsFooter: false
+}
 
 export default Layout;

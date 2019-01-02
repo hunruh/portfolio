@@ -37,7 +37,7 @@ class AboutPage extends React.Component {
 
 	render() {
 		return (
-			<Layout pageTitle="About" location={this.props.location}>
+			<Layout pageTitle="About" location={this.props.location} includeIconsFooter>
 				<SEO title="About" />
 				<h2>Who I Am</h2>
 				<p

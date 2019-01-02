@@ -57,6 +57,10 @@
 }
 .resumeItem:hover .itemBody {
     margin-left: 3px;
+
+    @include media-breakpoint-down(xs) {
+        margin-left: 0px;
+    }
 }
 
 .subTitle {

@@ -23,7 +23,7 @@ const ContactPage = ({ location }) => (
 			</a>
 			<a
 				className={styles.socialButton}
-				href="http://www.instagram.com/harrison.u/">
+				href="http://www.instagram.com/h.unruhly/">
 				<LogoInstagram className={styles.socialImage} />
 			</a>
 		</div>
