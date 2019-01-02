@@ -22,12 +22,16 @@ class NavMenu extends React.Component {
 	}
 
 	render() {
+		const backgroundAnimationClass = this.state.exiting
+			? animations.fadeExit
+			: animations.fadeEnter;
+
 		const animationClass = this.state.exiting
 			? animations.swingExit
 			: animations.swingEnter;
 
 		return (
-			<div className={`${styles.navMenu} ${animationClass}`}>
+			<div className={`${styles.navMenu} ${backgroundAnimationClass}`}>
 				{this.props.isOverlay && (
 					<div className={styles.close}>
 						<div className="container">

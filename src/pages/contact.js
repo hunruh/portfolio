@@ -11,7 +11,7 @@ import styles from '../styles/contact.module.scss';
 
 const ContactPage = ({ location }) => (
 	<Layout pageTitle="Contact" location={location}>
-		<SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
+		<SEO title="Contact" />
 		<div className={animations.slideEnter}>
 			<a className={styles.socialButton} href="https://github.com/hunruh">
 				<LogoGithub className={styles.socialImage} />

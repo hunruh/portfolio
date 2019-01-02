@@ -38,10 +38,7 @@ class AboutPage extends React.Component {
 	render() {
 		return (
 			<Layout pageTitle="About" location={this.props.location}>
-				<SEO
-					title="About"
-					keywords={[`gatsby`, `application`, `react`]}
-				/>
+				<SEO title="About" />
 				<h2>Who I Am</h2>
 				<p
 					className={

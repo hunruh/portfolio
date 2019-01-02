@@ -321,10 +321,7 @@ class ProjectsPage extends React.Component {
 	render() {
 		return (
 			<Layout pageTitle="Projects" location={this.props.location}>
-				<SEO
-					title="Projects"
-					keywords={[`gatsby`, `application`, `react`]}
-				/>
+				<SEO title="Projects" />
 				<StaticQuery
 					query={graphql`
 						query {

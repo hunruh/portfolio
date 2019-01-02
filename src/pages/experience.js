@@ -36,10 +36,7 @@ class ExperiencePage extends React.Component {
 	render() {
 		return (
 			<Layout pageTitle="Experience" location={this.props.location}>
-				<SEO
-					title="Experience"
-					keywords={[`gatsby`, `application`, `react`]}
-				/>
+				<SEO title="Experience" />
 				<a
 					className={layoutStyles.sideButton}
 					href={withPrefix('/resume.pdf')}>
