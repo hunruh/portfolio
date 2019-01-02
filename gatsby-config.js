@@ -6,6 +6,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-131572579-1`,
+        head: true,
+        anonymize: true
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
