@@ -102,6 +102,24 @@ class AboutPage extends React.Component {
 									}
 								}
 							}
+							quesadillaImage: file(
+								relativePath: { eq: "quesadilla_icon.png" }
+							) {
+								childImageSharp {
+									fluid(maxWidth: 40) {
+										...GatsbyImageSharpFluid
+									}
+								}
+							}
+							rowingImage: file(
+								relativePath: { eq: "rowing_icon.png" }
+							) {
+								childImageSharp {
+									fluid(maxWidth: 40) {
+										...GatsbyImageSharpFluid
+									}
+								}
+							}
 							skiImage: file(
 								relativePath: { eq: "ski_icon.png" }
 							) {
@@ -155,6 +173,19 @@ class AboutPage extends React.Component {
 								countDelay={0.3}
 							/>
 							<Stat
+								label="Meters Rowed"
+								value={7000000}
+								image={
+									<Img
+										fluid={
+											data.rowingImage.childImageSharp.fluid
+										}
+									/>
+								}
+								countDelay={0.3}
+								showPlus
+							/>
+							<Stat
 								label="National Parks Visited"
 								value={24}
 								image={
@@ -165,6 +196,19 @@ class AboutPage extends React.Component {
 									/>
 								}
 								countDelay={0.3}
+							/>
+							<Stat
+								label="Quesadillas Cooked"
+								value={500}
+								image={
+									<Img
+										fluid={
+											data.quesadillaImage.childImageSharp.fluid
+										}
+									/>
+								}
+								countDelay={0.3}
+								showPlus
 							/>
 						</div>
 					)}

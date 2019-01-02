@@ -10,6 +10,25 @@
     }
 }
 
+.footer {
+    color: $mid-grey;
+    font-size: 12px;
+    padding: 0px 265px 15px 265px;
+
+    @include media-breakpoint-down(xs) {
+        padding: 0px 30px 15px 30px;
+    }
+}
+.footer a {
+    border-bottom: 1px solid transparent;
+    color: $red;
+    transition: ease-in-out 0.15s;
+}
+.footer a:hover {
+    border-color: $red;
+    text-decoration: none;
+}
+
 .sideButton {
     border: 3px solid $red;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);

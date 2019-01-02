@@ -10,6 +10,16 @@ const Layout = ({ pageTitle, location, children }) => (
 	<>
 		<Header pageTitle={pageTitle} location={location} />
 		<div className={`container ${styles.contentWrapper}`}>{children}</div>
+		<div className={`container ${styles.footer}`}>
+			<div className="row">
+				<div className="col text-left">
+					&copy; 2019 Harrison Unruh
+				</div>
+				<div className="col text-right">
+				Icons by <a href="http://icons8.com">Icons8</a>
+				</div>
+			</div>
+		</div>
 	</>
 );
 
