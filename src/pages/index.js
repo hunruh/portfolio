@@ -6,10 +6,10 @@ import SEO from '../components/seo';
 import '../styles/core.scss';
 
 const IndexPage = () => (
-    <>
-        <SEO title="Welcome" />
-        <NavMenu location={{ pathname: '/' }} />
-    </>
+	<>
+		<SEO title="Welcome" />
+		<NavMenu location={{ pathname: '/' }} />
+	</>
 );
 
 export default IndexPage;

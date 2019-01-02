@@ -60,7 +60,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 									: []
 							)
 							.concat(meta)}
-						/>
+					/>
 				);
 			}}
 		/>

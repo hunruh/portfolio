@@ -12,11 +12,12 @@ const Layout = ({ pageTitle, location, includeIconsFooter, children }) => (
 		<div className={`container ${styles.contentWrapper}`}>{children}</div>
 		<div className={`container ${styles.footer}`}>
 			<div className="row">
-				<div className="col text-left">
-					&copy; 2019 Harrison Unruh
-				</div>
-				{includeIconsFooter &&
-					<div className="col text-right">Icons by <a href="http://icons8.com">Icons8</a></div>}
+				<div className="col text-left">&copy; 2019 Harrison Unruh</div>
+				{includeIconsFooter && (
+					<div className="col text-right">
+						Icons by <a href="http://icons8.com">Icons8</a>
+					</div>
+				)}
 			</div>
 		</div>
 	</>
@@ -30,6 +31,6 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
 	includeIconsFooter: false
-}
+};
 
 export default Layout;

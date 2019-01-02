@@ -9,7 +9,8 @@ const Stat = ({ label, value, image, countDelay, showPlus }) => (
 		<div className={styles.imageWrapper}>{image}</div>
 		<div className={styles.label}>{label}</div>
 		<div className={styles.value}>
-			<CountUp delay={countDelay} duration={2} end={value} />{showPlus ? "+" : ""}
+			<CountUp delay={countDelay} duration={2} end={value} />
+			{showPlus ? '+' : ''}
 		</div>
 	</div>
 );
